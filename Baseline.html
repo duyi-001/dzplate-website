@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂山区地星基增强服务平台-基线处理</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/flexible.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=d29672259ddd4c9f4fdef986a6675094"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex-b">
+            <div class="nav flex">
+                <!-- <a href=""></a> -->
+                <a href="index.html">PPP-RTK</a>
+                <a href="RTK.html">网格RTK服务</a>
+                <a href="Baseline.html" style="color: aqua;">基线处理</a>
+                <a href="#"></a>
+            </div>
+
+            <h1>
+                复杂山区地星基增强服务平台
+            </h1>
+            <div class="nav flex"></div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div id="mapContainer"></div>
+        <div class="left">
+            <div class="model model1">
+                <p class="modelTitle">监测站信息</p>
+                <div class="info">
+                    <div class="zero"></div>
+                    <div class="flex flex-a"><span>站名：</span><input type="text" id="stationName"></div>
+                    <div class="flex flex-a"><span>端口：</span><input type="text" id="port"></div>
+                    <div class="flex flex-a"><span>I P: </span><input type="text" id="ip"></div>
+                    <!-- <div class="flex flex-a"><span>天线类型：</span><input type="text" id="antenna"></div> -->
+                    <div class="zero"></div>
+                </div>
+            </div>
+            <div class="model HI">
+                <p class="modelTitle">
+                    实时数据接收情况
+                </p>
+                <div class="table-container">
+                    <table class="CORS">
+                        <tr>
+                            <td>站名</td>
+                            <td>状态</td>
+                            <td>在线时长</td>
+                            <td>数据量</td>
+                            <td>总数据量</td>
+                        </tr>
+                        <tr>
+                            <td>BAOX</td>
+                            <td>在线</td>
+                            <td>27:45:30</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>DANL</td>
+                            <td>在线</td>
+                            <td>28:45:30</td>
+                            <td>0.890KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>HANY</td>
+                            <td>在线</td>
+                            <td>29:45:30</td>
+                            <td>1.456KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>HOYA</td>
+                            <td>在线</td>
+                            <td>30:45:30</td>
+                            <td>0.789KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>LUDI</td>
+                            <td>在线</td>
+                            <td>31:45:30</td>
+                            <td>1.345KB</td>
+                            <td>321MB</td>
+                        </tr>
+                        <tr>
+                            <td>MINS</td>
+                            <td>在线</td>
+                            <td>32:45:30</td>
+                            <td>0.678KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>NBSH</td>
+                            <td>在线</td>
+                            <td>33:45:30</td>
+                            <td>1.567KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>PUJI</td>
+                            <td>在线</td>
+                            <td>34:45:30</td>
+                            <td>0.234KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>QAQI</td>
+                            <td>在线</td>
+                            <td>35:45:30</td>
+                            <td>1.789KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>QLAI</td>
+                            <td>在线</td>
+                            <td>36:45:30</td>
+                            <td>0.456KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>TIAQ</td>
+                            <td>在线</td>
+                            <td>37:45:30</td>
+                            <td>1.678KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>WAWS</td>
+                            <td>在线</td>
+                            <td>38:45:30</td>
+                            <td>0.890KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>YINJ</td>
+                            <td>在线</td>
+                            <td>39:45:30</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="model">
+                <p class="modelTitle">坐标信息上传统计</p>
+                <div id="chartj-1" style="height: 5rem"></div>
+            </div>
+            <div class="model">
+                <p class="modelTitle">监测站坐标变化</p>
+                <div id="chartj-2" style="height: 5rem"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/d3-delaunay.min.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/Baseline.js"></script>
+    <script src="./js/table.js"></script>
+
+</body>
+
+</html>

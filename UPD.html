@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂山区地星基增强服务平台-实时UPD</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/flexible.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=d29672259ddd4c9f4fdef986a6675094"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex-b">
+            <div class="nav flex">
+                <a href="index.html" style="color: aqua;">PPP-RTK</a>
+                <a href="RTK.html">网格RTK服务</a>
+                <a href="Baseline.html">基线处理</a>
+                <a href="#"></a>
+            </div>
+
+            <h1>
+                复杂山区地星基增强服务平台
+            </h1>
+            <div class="nav flex"></div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div id="mapContainer"></div>
+        <div class="left">
+            <div class="model model1">
+                <p class="modelTitle">实时UPD播发情况</p>
+                <div class="info">
+                    <div class="zero"></div>
+                    <div class="flex flex-a"><span>I P: </span><input type="text" id="ip"></div>
+                    <div class="flex flex-a"><span>端口：</span><input type="text" id="port"></div>
+                    <div class="flex flex-a"><span>挂载点：</span><input type="text" id="Hardpoint"></div>
+                    <div class="flex flex-a"><span>在线时长：</span><input type="text" id="totalTime"></div>
+                    <div class="zero"></div>
+
+                </div>
+            </div>
+            <div class="model HI">
+                <p class="modelTitle">
+                    实时数据接收情况
+                </p>
+                <div class="table-container">
+                    <table class="CORS">
+                        <tr>
+                            <td>站名</td>
+                            <td>状态</td>
+                            <td>在线时长</td>
+                            <td>数据量</td>
+                            <td>总数据量</td>
+                        </tr>
+                        <tr>
+                            <td>BAOX</td>
+                            <td>在线</td>
+                            <td>52:34:15</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>DANL</td>
+                            <td>在线</td>
+                            <td>58:22:30</td>
+                            <td>0.890KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>HANY</td>
+                            <td>在线</td>
+                            <td>55:45:25</td>
+                            <td>1.456KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>HOYA</td>
+                            <td>在线</td>
+                            <td>57:10:40</td>
+                            <td>0.789KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>LUDI</td>
+                            <td>在线</td>
+                            <td>53:25:15</td>
+                            <td>1.345KB</td>
+                            <td>321MB</td>
+                        </tr>
+                        <tr>
+                            <td>MINS</td>
+                            <td>在线</td>
+                            <td>56:30:20</td>
+                            <td>0.678KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>NBSH</td>
+                            <td>在线</td>
+                            <td>59:05:35</td>
+                            <td>1.567KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>PUJI</td>
+                            <td>在线</td>
+                            <td>54:20:45</td>
+                            <td>0.234KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>QAQI</td>
+                            <td>在线</td>
+                            <td>51:10:10</td>
+                            <td>1.789KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>QLAI</td>
+                            <td>在线</td>
+                            <td>57:30:25</td>
+                            <td>0.456KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>TIAQ</td>
+                            <td>在线</td>
+                            <td>53:45:30</td>
+                            <td>1.678KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>WAWS</td>
+                            <td>在线</td>
+                            <td>56:00:40</td>
+                            <td>0.890KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>YINJ</td>
+                            <td>在线</td>
+                            <td>54:15:25</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="model model2">
+                <p class="modelTitle">宽巷UPD</p>
+                <div class="mainwx" id="chart-area-1">
+                    <div class="button-group">
+                        <button data-type="BDS">BDS</button>
+                        <button data-type="GPS">GPS</button>
+                        <button data-type="Gal">Gal</button>
+                    </div>
+                    <div id="mtable3-1"></div>
+                </div>
+            </div>
+            <div class="model model2">
+                <p class="modelTitle">窄巷UPD</p>
+                <div class="mainwx" id="chart-area-2">
+                    <div class="button-group">
+                        <button data-type="BDS">BDS</button>
+                        <button data-type="GPS">GPS</button>
+                        <button data-type="Gal">Gal</button>
+                    </div>
+                    <div id="mtable3-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部浮动盒子 -->
+        <div class="bottom-box">
+            <a href="index.html">实时轨道</a>
+            <a href="clockcorrection.html">实时钟差</a>
+            <a href="UPD.html" class="acting">实时UPD</a>
+            <a href="ionosphere.html">实时电离层</a>
+            <a href="troposphere.html">实时对流层</a>
+        </div>
+    </div>
+
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/d3-delaunay.min.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/UPD.js"></script>
+    <script src="./js/table.js"></script>
+
+</body>
+
+</html>

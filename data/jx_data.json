@@ -1,0 +1,676 @@
+{
+  "2024 319": {
+    "A": [
+      {
+        "staName": "R009",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.0188,
+          "l": -0.0089,
+          "h": -0.0229
+        }
+      },
+      {
+        "staName": "R019",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": -0.0274,
+          "l": 0.0473,
+          "h": 0.2666
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0076,
+          "l": -0.4213,
+          "h": -0.1323
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": 0.2081,
+          "l": 0.2732,
+          "h": 0.2621
+        }
+      },
+      {
+        "staName": "R038",
+        "quality": 5,
+        "SDhAccChange": {
+          "b": 0.0072,
+          "l": -0.0027,
+          "h": -0.0043
+        }
+      },
+      {
+        "staName": "R039",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.0109,
+          "l": -0.0058,
+          "h": -0.0068
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0422,
+          "l": -0.0085,
+          "h": 0.0088
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.003,
+          "l": 0.0394,
+          "h": -0.0315
+        }
+      },
+      {
+        "staName": "R043",
+        "quality": 5,
+        "SDhAccChange": {
+          "b": 0.0108,
+          "l": -0.0097,
+          "h": -0.0013
+        }
+      }
+    ],
+    "B": [
+      {
+        "staName": "R009",
+        "quality": 5,
+        "SDhAccChange": {
+          "b": 0.0203,
+          "l": -0.0076,
+          "h": -0.0186
+        }
+      },
+      {
+        "staName": "R019",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": -0.0282,
+          "l": 0.0485,
+          "h": 0.2699
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 8,
+        "SDhAccChange": {
+          "b": 0.0072,
+          "l": -0.4233,
+          "h": -0.1303
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": 0.2074,
+          "l": 0.273,
+          "h": 0.2665
+        }
+      },
+      {
+        "staName": "R038",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.0078,
+          "l": -0.0034,
+          "h": -0.0084
+        }
+      },
+      {
+        "staName": "R039",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.0109,
+          "l": -0.0067,
+          "h": -0.0084
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0434,
+          "l": -0.01,
+          "h": 0.0073
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0028,
+          "l": 0.0397,
+          "h": -0.0301
+        }
+      },
+      {
+        "staName": "R043",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.011,
+          "l": -0.0102,
+          "h": -0.0056
+        }
+      }
+    ],
+    "C": [
+      {
+        "staName": "R009",
+        "quality": 5,
+        "SDhAccChange": {
+          "b": 0.0216,
+          "l": -0.0092,
+          "h": -0.0183
+        }
+      },
+      {
+        "staName": "R019",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": -0.0284,
+          "l": 0.0491,
+          "h": 0.2726
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0083,
+          "l": -0.4281,
+          "h": -0.1244
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": 0.2072,
+          "l": 0.2746,
+          "h": 0.2691
+        }
+      },
+      {
+        "staName": "R038",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.0078,
+          "l": -0.0023,
+          "h": -0.0112
+        }
+      },
+      {
+        "staName": "R039",
+        "quality": 4,
+        "SDhAccChange": {
+          "b": 0.01,
+          "l": -0.0059,
+          "h": -0.0111
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 6,
+        "SDhAccChange": {
+          "b": 0.0437,
+          "l": -0.0102,
+          "h": 0.004
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0032,
+          "l": 0.039,
+          "h": -0.0302
+        }
+      },
+      {
+        "staName": "R043",
+        "quality": 5,
+        "SDhAccChange": {
+          "b": 0.0106,
+          "l": -0.0096,
+          "h": -0.0078
+        }
+      }
+    ],
+    "D": [
+      {
+        "staName": "R019",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": -0.0301,
+          "l": 0.0434,
+          "h": 0.2859
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0087,
+          "l": -0.4288,
+          "h": -0.1255
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2048,
+          "l": 0.2725,
+          "h": 0.2722
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.0426,
+          "l": -0.0113,
+          "h": 0.002
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 7,
+        "SDhAccChange": {
+          "b": 0.0035,
+          "l": 0.0392,
+          "h": -0.0311
+        }
+      }
+    ],
+    "E": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0269,
+          "l": 0.0459,
+          "h": 0.296
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.0066,
+          "l": -0.4282,
+          "h": -0.1294
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.206,
+          "l": 0.2735,
+          "h": 0.2828
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0416,
+          "l": -0.0119,
+          "h": -0.0001
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.003,
+          "l": 0.0395,
+          "h": -0.0309
+        }
+      }
+    ],
+    "F": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0262,
+          "l": 0.0432,
+          "h": 0.2919
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0062,
+          "l": -0.4263,
+          "h": -0.133
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2087,
+          "l": 0.274,
+          "h": 0.2788
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0398,
+          "l": -0.0116,
+          "h": 0
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0026,
+          "l": 0.0396,
+          "h": -0.031
+        }
+      }
+    ],
+    "G": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0269,
+          "l": 0.0428,
+          "h": 0.2912
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0083,
+          "l": -0.4259,
+          "h": -0.1339
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2094,
+          "l": 0.2743,
+          "h": 0.28
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0405,
+          "l": -0.0121,
+          "h": -0.0006
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.002,
+          "l": 0.0395,
+          "h": -0.0319
+        }
+      }
+    ],
+    "H": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0272,
+          "l": 0.0416,
+          "h": 0.2893
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0102,
+          "l": -0.4228,
+          "h": -0.1339
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2101,
+          "l": 0.2752,
+          "h": 0.2783
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.039,
+          "l": -0.0123,
+          "h": 0.0043
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0019,
+          "l": 0.0389,
+          "h": -0.0333
+        }
+      }
+    ],
+    "I": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0273,
+          "l": 0.041,
+          "h": 0.2896
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0097,
+          "l": -0.42,
+          "h": -0.1324
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2102,
+          "l": 0.2739,
+          "h": 0.2763
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0381,
+          "l": -0.0124,
+          "h": 0.0062
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0016,
+          "l": 0.0388,
+          "h": -0.0337
+        }
+      }
+    ],
+    "J": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0251,
+          "l": 0.0427,
+          "h": 0.2829
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0086,
+          "l": -0.4177,
+          "h": -0.1321
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": 0.2127,
+          "l": 0.2759,
+          "h": 0.2766
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0378,
+          "l": -0.012,
+          "h": 0.0063
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0008,
+          "l": 0.038,
+          "h": -0.0342
+        }
+      }
+    ],
+    "K": [
+      {
+        "staName": "R019",
+        "quality": 9,
+        "SDhAccChange": {
+          "b": -0.0264,
+          "l": 0.0417,
+          "h": 0.2834
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.0113,
+          "l": -0.4161,
+          "h": -0.1336
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": 0.2135,
+          "l": 0.2758,
+          "h": 0.2686
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0379,
+          "l": -0.0134,
+          "h": 0.0088
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 2,
+        "SDhAccChange": {
+          "b": 0.0009,
+          "l": 0.0377,
+          "h": -0.0351
+        }
+      }
+    ],
+    "L": [
+      {
+        "staName": "R019",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": -0.0275,
+          "l": 0.0437,
+          "h": 0.2797
+        }
+      },
+      {
+        "staName": "R025",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.0109,
+          "l": -0.418,
+          "h": -0.1237
+        }
+      },
+      {
+        "staName": "R031",
+        "quality": 10,
+        "SDhAccChange": {
+          "b": 0.207,
+          "l": 0.2753,
+          "h": 0.3038
+        }
+      },
+      {
+        "staName": "R040",
+        "quality": 1,
+        "SDhAccChange": {
+          "b": 0.0388,
+          "l": -0.0144,
+          "h": 0.0078
+        }
+      },
+      {
+        "staName": "R041",
+        "quality": 3,
+        "SDhAccChange": {
+          "b": 0.0008,
+          "l": 0.0376,
+          "h": -0.0357
+        }
+      }
+    ]
+  }
+}

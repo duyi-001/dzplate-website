@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂山区地星基增强服务平台-实时电离层</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/flexible.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=d29672259ddd4c9f4fdef986a6675094"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="flex-b">
+            <div class="nav flex">
+                <!-- <a href=""></a> -->
+                <a href="index.html" style="color: aqua;">PPP-RTK</a>
+                <a href="RTK.html">网格RTK服务</a>
+                <a href="Baseline.html">基线处理</a>
+                <a href="#"></a>
+            </div>
+
+            <h1>
+                复杂山区地星基增强服务平台
+            </h1>
+            <div class="nav flex"></div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div id="mapContainer"></div>
+        <div class="left">
+            <div class="model model1">
+                <p class="modelTitle">实时电离层播发情况</p>
+                <div class="info">
+                    <div class="zero"></div>
+                    <div class="flex flex-a"><span>I P: </span><input type="text" id="ip"></div>
+                    <div class="flex flex-a"><span>端口：</span><input type="text" id="port"></div>
+                    <div class="flex flex-a"><span>挂载点：</span><input type="text" id="Hardpoint"></div>
+                    <div class="flex flex-a"><span>在线时长：</span><input type="text" id="totalTime"></div>
+                    <div class="zero"></div>
+                </div>
+            </div>
+            <div class="model HI">
+                <p class="modelTitle">实时数据接收情况</p>
+                <div class="table-container">
+                    <table class="CORS">
+                        <tr>
+                            <td>站名</td>
+                            <td>状态</td>
+                            <td>在线时长</td>
+                            <td>数据量</td>
+                            <td>总数据量</td>
+                        </tr>
+                        <tr>
+                            <td>BAOX</td>
+                            <td>在线</td>
+                            <td>27:45:30</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>DANL</td>
+                            <td>在线</td>
+                            <td>28:45:30</td>
+                            <td>0.890KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>HANY</td>
+                            <td>在线</td>
+                            <td>29:45:30</td>
+                            <td>1.456KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>HOYA</td>
+                            <td>在线</td>
+                            <td>30:45:30</td>
+                            <td>0.789KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>LUDI</td>
+                            <td>在线</td>
+                            <td>31:45:30</td>
+                            <td>1.345KB</td>
+                            <td>321MB</td>
+                        </tr>
+                        <tr>
+                            <td>MINS</td>
+                            <td>在线</td>
+                            <td>32:45:30</td>
+                            <td>0.678KB</td>
+                            <td>432MB</td>
+                        </tr>
+                        <tr>
+                            <td>NBSH</td>
+                            <td>在线</td>
+                            <td>33:45:30</td>
+                            <td>1.567KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>PUJI</td>
+                            <td>在线</td>
+                            <td>34:45:30</td>
+                            <td>0.234KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>QAQI</td>
+                            <td>在线</td>
+                            <td>35:45:30</td>
+                            <td>1.789KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>QLAI</td>
+                            <td>在线</td>
+                            <td>36:45:30</td>
+                            <td>0.456KB</td>
+                            <td>345MB</td>
+                        </tr>
+                        <tr>
+                            <td>TIAQ</td>
+                            <td>在线</td>
+                            <td>37:45:30</td>
+                            <td>1.678KB</td>
+                            <td>456MB</td>
+                        </tr>
+                        <tr>
+                            <td>WAWS</td>
+                            <td>在线</td>
+                            <td>38:45:30</td>
+                            <td>0.890KB</td>
+                            <td>234MB</td>
+                        </tr>
+                        <tr>
+                            <td>YINJ</td>
+                            <td>在线</td>
+                            <td>39:45:30</td>
+                            <td>1.123KB</td>
+                            <td>345MB</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="model model5">
+                <p class="modelTitle">电离层分布图</p>
+                <div class="model5Link1" style="height: 3rem;">
+                    <img id="dynamicImage1" src="placeholder.jpg" data-src="./images/电离层/电离层1.png" alt=""
+                        class="fillImage" loading="lazy"><!--alt="电离层图片" -->
+                </div>
+            </div>
+            <div class="model HI">
+                <p class="modelTitle">用户信息</p>
+                <div class="table-container">
+                    <table class="USER">
+                        <tr>
+                            <td>用户名称</td>
+                            <td>状态</td>
+                            <td>在线时长</td>
+                            <td>数据量</td>
+                            <td>总数据量</td>
+                        </tr>
+                        <tr>
+                            <td>D102</td>
+                            <td>在线</td>
+                            <td>53:14:09</td>
+                            <td>1.301KB</td>
+                            <td>95.97MB</td>
+                        </tr>
+                        <tr>
+                            <td>D103</td>
+                            <td>在线</td>
+                            <td>59:34:56</td>
+                            <td>1.302KB</td>
+                            <td>110.75MB</td>
+                        </tr>
+                        <tr>
+                            <td>D104</td>
+                            <td>在线</td>
+                            <td>52:59:23</td>
+                            <td>1.303KB</td>
+                            <td>95.71MB</td>
+                        </tr>
+                        <tr>
+                            <td>D105</td>
+                            <td>在线</td>
+                            <td>55:02:11</td>
+                            <td>1.304KB</td>
+                            <td>98.84MB</td>
+                        </tr>
+                        <tr>
+                            <td>D106</td>
+                            <td>在线</td>
+                            <td>58:45:32</td>
+                            <td>1.305KB</td>
+                            <td>110.09MB</td>
+                        </tr>
+                        <tr>
+                            <td>D107</td>
+                            <td>在线</td>
+                            <td>54:12:45</td>
+                            <td>1.306KB</td>
+                            <td>97.14MB</td>
+                        </tr>
+                        <tr>
+                            <td>D108</td>
+                            <td>在线</td>
+                            <td>57:23:14</td>
+                            <td>1.307KB</td>
+                            <td>109.37MB</td>
+                        </tr>
+                        <tr>
+                            <td>D109</td>
+                            <td>在线</td>
+                            <td>53:34:56</td>
+                            <td>1.308KB</td>
+                            <td>96.68MB</td>
+                        </tr>
+                        <tr>
+                            <td>D110</td>
+                            <td>在线</td>
+                            <td>69:12:34</td>
+                            <td>1.309KB</td>
+                            <td>138.06MB</td>
+                        </tr>
+                        <tr>
+                            <td>D111</td>
+                            <td>在线</td>
+                            <td>60:45:30</td>
+                            <td>1.310KB</td>
+                            <td>114.90MB</td>
+                        </tr>
+                        <tr>
+                            <td>D112</td>
+                            <td>在线</td>
+                            <td>56:12:34</td>
+                            <td>1.311KB</td>
+                            <td>100.47MB</td>
+                        </tr>
+                        <tr>
+                            <td>D113</td>
+                            <td>在线</td>
+                            <td>57:23:14</td>
+                            <td>1.312KB</td>
+                            <td>109.37MB</td>
+                        </tr>
+                        <tr>
+                            <td>D114</td>
+                            <td>在线</td>
+                            <td>53:45:30</td>
+                            <td>1.313KB</td>
+                            <td>96.68MB</td>
+                        </tr>
+                        <tr>
+                            <td>D115</td>
+                            <td>在线</td>
+                            <td>59:12:34</td>
+                            <td>1.314KB</td>
+                            <td>110.75MB</td>
+                        </tr>
+                        <tr>
+                            <td>D116</td>
+                            <td>在线</td>
+                            <td>55:23:14</td>
+                            <td>1.315KB</td>
+                            <td>100.47MB</td>
+                        </tr>
+                        <tr>
+                            <td>D202</td>
+                            <td>在线</td>
+                            <td>52:12:34</td>
+                            <td>1.316KB</td>
+                            <td>95.71MB</td>
+                        </tr>
+                        <tr>
+                            <td>D203</td>
+                            <td>在线</td>
+                            <td>51:23:14</td>
+                            <td>1.317KB</td>
+                            <td>93.85MB</td>
+                        </tr>
+                        <tr>
+                            <td>D204</td>
+                            <td>在线</td>
+                            <td>54:45:30</td>
+                            <td>1.318KB</td>
+                            <td>97.14MB</td>
+                        </tr>
+                        <tr>
+                            <td>D205</td>
+                            <td>在线</td>
+                            <td>56:12:34</td>
+                            <td>1.319KB</td>
+                            <td>100.47MB</td>
+                        </tr>
+                        <tr>
+                            <td>D206</td>
+                            <td>在线</td>
+                            <td>59:23:14</td>
+                            <td>1.320KB</td>
+                            <td>110.75MB</td>
+                        </tr>
+                        <tr>
+                            <td>D302</td>
+                            <td>在线</td>
+                            <td>53:12:34</td>
+                            <td>1.321KB</td>
+                            <td>96.68MB</td>
+                        </tr>
+                        <tr>
+                            <td>D303</td>
+                            <td>在线</td>
+                            <td>51:23:14</td>
+                            <td>1.322KB</td>
+                            <td>93.85MB</td>
+                        </tr>
+                        <tr>
+                            <td>D304</td>
+                            <td>在线</td>
+                            <td>54:45:30</td>
+                            <td>1.323KB</td>
+                            <td>97.14MB</td>
+                        </tr>
+                        <tr>
+                            <td>D402</td>
+                            <td>在线</td>
+                            <td>59:23:14</td>
+                            <td>1.324KB</td>
+                            <td>110.75MB</td>
+                        </tr>
+                        <tr>
+                            <td>D403</td>
+                            <td>在线</td>
+                            <td>53:45:30</td>
+                            <td>1.325KB</td>
+                            <td>96.68MB</td>
+                        </tr>
+                        <tr>
+                            <td>D404</td>
+                            <td>在线</td>
+                            <td>56:12:34</td>
+                            <td>1.326KB</td>
+                            <td>100.47MB</td>
+                        </tr>
+                        <tr>
+                            <td>D405</td>
+                            <td>在线</td>
+                            <td>58:23:14</td>
+                            <td>1.327KB</td>
+                            <td>109.37MB</td>
+                        </tr>
+                        <tr>
+                            <td>D406</td>
+                            <td>在线</td>
+                            <td>54:45:30</td>
+                            <td>1.328KB</td>
+                            <td>97.14MB</td>
+                        </tr>
+                        <tr>
+                            <td>D502</td>
+                            <td>在线</td>
+                            <td>63:14:09</td>
+                            <td>110KB</td>
+                            <td>100MB</td>
+                        </tr>
+                        <tr>
+                            <td>D503</td>
+                            <td>在线</td>
+                            <td>68:34:56</td>
+                            <td>115KB</td>
+                            <td>120MB</td>
+                        </tr>
+                        <tr>
+                            <td>D504</td>
+                            <td>在线</td>
+                            <td>50:59:23</td>
+                            <td>120KB</td>
+                            <td>130MB</td>
+                        </tr>
+                        <tr>
+                            <td>D505</td>
+                            <td>在线</td>
+                            <td>52:02:11</td>
+                            <td>125KB</td>
+                            <td>140MB</td>
+                        </tr>
+                        <tr>
+                            <td>D506</td>
+                            <td>在线</td>
+                            <td>58:45:32</td>
+                            <td>130KB</td>
+                            <td>150MB</td>
+                        </tr>
+                        <tr>
+                            <td>D507</td>
+                            <td>在线</td>
+                            <td>54:12:45</td>
+                            <td>135KB</td>
+                            <td>160MB</td>
+                        </tr>
+                        <tr>
+                            <td>D508</td>
+                            <td>在线</td>
+                            <td>61:23:14</td>
+                            <td>140KB</td>
+                            <td>170MB</td>
+                        </tr>
+                        <tr>
+                            <td>D602</td>
+                            <td>在线</td>
+                            <td>69:12:34</td>
+                            <td>150KB</td>
+                            <td>190MB</td>
+                        </tr>
+                        <tr>
+                            <td>D603</td>
+                            <td>在线</td>
+                            <td>64:45:30</td>
+                            <td>130KB</td>
+                            <td>200MB</td>
+                        </tr>
+                        <tr>
+                            <td>D604</td>
+                            <td>在线</td>
+                            <td>60:12:34</td>
+                            <td>120KB</td>
+                            <td>210MB</td>
+                        </tr>
+                        <tr>
+                            <td>D605</td>
+                            <td>在线</td>
+                            <td>65:23:14</td>
+                            <td>110KB</td>
+                            <td>220MB</td>
+                        </tr>
+                        <tr>
+                            <td>D606</td>
+                            <td>在线</td>
+                            <td>59:45:30</td>
+                            <td>100KB</td>
+                            <td>230MB</td>
+                        </tr>
+                        <tr>
+                            <td>D607</td>
+                            <td>在线</td>
+                            <td>66:12:34</td>
+                            <td>90KB</td>
+                            <td>240MB</td>
+                        </tr>
+                        <tr>
+                            <td>D702</td>
+                            <td>在线</td>
+                            <td>55:45:30</td>
+                            <td>70KB</td>
+                            <td>250MB</td>
+                        </tr>
+                        <tr>
+                            <td>D703</td>
+                            <td>在线</td>
+                            <td>53:12:34</td>
+                            <td>60KB</td>
+                            <td>300MB</td>
+                        </tr>
+                        <tr>
+                            <td>D704</td>
+                            <td>在线</td>
+                            <td>51:23:14</td>
+                            <td>50KB</td>
+                            <td>400MB</td>
+                        </tr>
+                        <tr>
+                            <td>D705</td>
+                            <td>在线</td>
+                            <td>59:45:30</td>
+                            <td>40KB</td>
+                            <td>150MB</td>
+                        </tr>
+                        <tr>
+                            <td>D706</td>
+                            <td>在线</td>
+                            <td>62:12:34</td>
+                            <td>30KB</td>
+                            <td>100MB</td>
+                        </tr>
+                        <tr>
+                            <td>D707</td>
+                            <td>在线</td>
+                            <td>64:23:14</td>
+                            <td>100KB</td>
+                            <td>300MB</td>
+                        </tr>
+                        <tr>
+                            <td>D708</td>
+                            <td>在线</td>
+                            <td>58:45:30</td>
+                            <td>40KB</td>
+                            <td>120MB</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- 底部浮动盒子 -->
+        <div class="bottom-box">
+            <a href="index.html">实时轨道</a>
+            <a href="clockcorrection.html">实时钟差</a>
+            <a href="UPD.html">实时UPD</a>
+            <a href="ionosphere.html" class="acting">实时电离层</a>
+            <a href="troposphere.html">实时对流层</a>
+        </div>
+    </div>
+
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/d3-delaunay.min.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/img.js"></script>
+    <script src="./js/table.js"></script>
+</body>
+
+</html>
