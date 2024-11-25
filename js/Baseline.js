@@ -1,6 +1,13 @@
 (function () {
+   // 配置项
+    const config = {
+        filePath: 'data/count_records.json',  // JSON文件路径
+        updateInterval: 60 * 60 * 1000,       // 更新间隔（毫秒），每小时更新一次
+        chartId: 'chartj-1'                   // 图表DOM元素ID
+    };
+
     // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('chartj-1'));
+    var myChart = echarts.init(document.getElementById(config.chartId));
 
     // 指定图表的配置项和数据
     var option = {
@@ -71,7 +78,7 @@
     };
 
     // 读取JSON文件内容
-    fetch('data/count_records.json')
+    fetch(config.filePath)
         .then(response => response.json())
         .then(jsonData => {
             const dataKey = Object.keys(jsonData)[0]; // 获取第一个键，即日期
@@ -90,21 +97,24 @@
             // 每小时更新数据
             setInterval(() => {
                 updateData(new Date(), keys, values, initialData);
-            }, 60 * 60 * 1000);  // 每小时更新一次
+            }, config.updateInterval);  // 每小时更新一次
         })
         .catch(error => console.error('Error:', error));
 
     function initializeData(currentTime, keys, values) {
         const currentHour = currentTime.getHours();
+        const currentMinute = currentTime.getMinutes();
+
         return keys.map((key, index) => {
             const jsonValue = values[index];
 
-            if (jsonValue <= currentHour) {
-                // JSON中的数据小于等于当前时间的小时数，直接使用JSON中的数据
+            if (currentHour >= jsonValue) {
+                // 当前时间的小时数大于等于JSON中的数据，直接使用JSON中的数据
                 return jsonValue;
             } else {
-                // JSON中的数据大于当前时间的小时数，从当前时间的小时数开始
-                return currentHour;
+                // 根据当前时间的分钟数生成对应的数据
+                const displayHour = currentMinute < 31 ? currentHour : currentHour + 1;
+                return displayHour;
             }
         });
     }
@@ -112,25 +122,20 @@
     function updateData(currentTime, keys, values, initialData) {
         const currentHour = currentTime.getHours();
         const currentMinute = currentTime.getMinutes();
+        const displayHour = currentMinute < 31 ? currentHour : currentHour + 1;
 
-        if (currentHour >= 23 && currentMinute >= 45) {
-            // 23:45后展示JSON文件中的数据
-            option.series[0].data = values;
-        } else {
-            // 对于未来的时间点，每小时随机增加0或1
-            option.series[0].data = keys.map((key, index) => {
-                const jsonValue = values[index];
-                const currentValue = initialData[index];
+        option.series[0].data = keys.map((key, index) => {
+            const jsonValue = values[index];
+            const currentValue = initialData[index];
 
-                if (jsonValue <= currentHour) {
-                    // JSON中的数据小于等于当前时间的小时数，直接使用JSON中的数据
-                    return jsonValue;
-                } else {
-                    // 未来的时间点，随机增加0或1
-                    return Math.min(currentValue + Math.floor(Math.random() * 2), jsonValue);
-                }
-            });
-        }
+            if (currentHour >= jsonValue) {
+                // 当前时间的小时数大于等于JSON中的数据，直接使用JSON中的数据
+                return jsonValue;
+            } else {
+                // 如果当前值小于JSON中的值，根据当前时间的分钟数生成对应的数据
+                return Math.min(displayHour, jsonValue);
+            }
+        });
 
         // 更新图表
         myChart.setOption(option);
